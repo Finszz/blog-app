@@ -28,7 +28,7 @@ const Home: React.FunctionComponent = () => {
   }, [filterCategory]);
 
   const printArticleList = () => {
-    return articleList.map((val: any, idx: number) => {
+    return articleList.map((val: any) => {
       return (
         <div
           key={val.objectId}

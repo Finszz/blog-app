@@ -2,12 +2,10 @@
 import * as React from "react";
 import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
-import { useRouter } from "next/navigation";
 import { useAppSelector } from "@/lib/redux/hooks";
 import { apiCall } from "@/helper/apiCall";
 import { setSignIn, setSignOut } from "@/lib/redux/features/userSlice";
 import { useAppDispatch } from "@/lib/redux/hooks";
-import { error } from "node:console";
 import { Button } from "@/components/ui/button";
 
 const Navbar: React.FunctionComponent = () => {
@@ -28,7 +26,7 @@ const Navbar: React.FunctionComponent = () => {
 
   React.useEffect(() => {
     keepLogin();
-  }, [])
+  })
   return (
     <div className="flex items-center justify-between px-6 lg:px-24 py-5">
       <Link href="/" className="text-3xl font-bold">
